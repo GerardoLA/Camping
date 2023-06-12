@@ -52,7 +52,7 @@ public class AlmacenarReserva extends HttpServlet {
 		ReservaModelo rm = new ReservaModelo();
 		ParcelaModelo pm = new ParcelaModelo();
 		Reserva reserva = new Reserva();
-		Parcela parcela = new Parcela();
+		
 		
 		
 		reserva.setNombre_usuario(request.getParameter("nombre_usuario"));
@@ -77,11 +77,13 @@ public class AlmacenarReserva extends HttpServlet {
 			reserva.setLuz(true);
 		}
 		
+		
 		reserva.setParcela(pm.getParcela(Integer.parseInt(request.getParameter("id_parcela"))));
 		
 		rm.insertarReserva(reserva);
 		int id = rm.getId();
 		request.setAttribute("id", id);
+		
 		
 		request.setAttribute("reserva", reserva);
 		request.getRequestDispatcher("infoReserva.jsp").forward(request, response);

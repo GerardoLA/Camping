@@ -21,7 +21,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col">
-				<h3>Reserva eliminada</h3>
+				<h3>Reserva eliminada todo funciona!</h3>
 			</div>
 		</div>
 	</div>
